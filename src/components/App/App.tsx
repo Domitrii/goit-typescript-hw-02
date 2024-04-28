@@ -14,7 +14,6 @@ function App() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
   const [errorName, setErrorName] = useState<string>("");
-  const [isEmpty, setIsEmpty] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -28,7 +27,6 @@ function App() {
     setQuery(queryValue);
     setImages([]);
     setPage(1);
-    setIsEmpty(false);
     setIsError(false);
     setIsVisible(false);
   };
@@ -45,7 +43,6 @@ function App() {
           page
         );
         if (results.length === 0) {
-          setIsEmpty(true);
           return;
         }
         setImages((prevState) => [...prevState, ...results]);
