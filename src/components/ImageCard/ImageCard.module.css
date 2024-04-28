@@ -1,0 +1,6 @@
+.imgItem{
+    object-fit: contain;
+    width: 400px;
+    height: 400px;
+    background-color: #d2d2d2;
+}
